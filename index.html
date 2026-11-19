@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#7b3f31">
+  <meta name="description" content="An interactive English lesson about sleep, seasons and routines.">
+  <title>Sleep Reset · English lesson</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Sleep Reset home">Sleep Reset</a>
+    <button class="progress-pill" id="progressButton" type="button" aria-label="Show lesson progress">
+      <span id="progressText">0%</span><span class="progress-ring" aria-hidden="true"></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">English lesson · self-paced</p>
+        <h1>How the seasons<br><em>change our sleep</em></h1>
+        <p class="hero-note">A cosy lesson about autumn moods, sleep routines and the language to talk about them.</p>
+        <a class="primary-button" href="#lead-in">Start the lesson</a>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <span class="doodle doodle-one">✦</span>
+        <img class="hero-person" src="assets/sleep-reader.png" alt="">
+        <img class="dnd" src="assets/do-not-disturb.png" alt="">
+      </div>
+    </section>
+
+    <nav class="lesson-nav" aria-label="Lesson sections">
+      <a href="#lead-in">Lead-in</a>
+      <a href="#watch">Watch</a>
+      <a href="#reading">Read</a>
+      <a href="#vocabulary">Vocabulary</a>
+      <a href="#practice">Practice</a>
+      <a href="#cases">Cases</a>
+      <a href="#review">Review</a>
+    </nav>
+
+    <section class="lesson-section" id="lead-in" data-section="lead-in">
+      <div class="section-heading">
+        <p class="kicker">01 · Lead-in</p>
+        <h2>What might be behind each one?</h2>
+        <p>Read the situations below and decide what might be behind each one. Put each situation into one of four categories:</p>
+      </div>
+
+      <div class="legend-grid">
+        <div><span>🧠</span><strong>BIOLOGICAL</strong><small>related to your body, sleep, energy or circadian rhythm</small></div>
+        <div><span>💭</span><strong>PSYCHOLOGICAL</strong><small>related to your thoughts, emotions or perception</small></div>
+        <div><span>👥</span><strong>SOCIAL</strong><small>related to other people, habits or social life</small></div>
+        <div><span>🔀</span><strong>A MIX OF SEVERAL FACTORS</strong><small>more than one factor could be involved</small></div>
+      </div>
+
+      <div class="sort-board" id="sortBoard">
+        <div class="situation-bank" id="situationBank" aria-label="Situations to classify"></div>
+        <div class="category-grid">
+          <div class="dropzone" data-category="biological"><h3>BIOLOGICAL</h3><div class="drop-items"></div></div>
+          <div class="dropzone" data-category="psychological"><h3>PSYCHOLOGICAL</h3><div class="drop-items"></div></div>
+          <div class="dropzone" data-category="social"><h3>SOCIAL</h3><div class="drop-items"></div></div>
+          <div class="dropzone" data-category="mix"><h3>A MIX OF SEVERAL FACTORS</h3><div class="drop-items"></div></div>
+        </div>
+      </div>
+
+      <div class="prompt-card sentence-starters">
+        <h3>Use the sentence starters to explain your ideas:</h3>
+        <ul>
+          <li>I’d classify this as ... because ...</li>
+          <li>I think this is mainly related to ...</li>
+          <li>One possible explanation is that ...</li>
+          <li>This could be linked to ...</li>
+          <li>I think ... might play a role here.</li>
+          <li>It could be a combination of ... and ...</li>
+          <li>Another factor that could contribute to this is ...</li>
+        </ul>
+        <label for="leadInNotes">Your ideas</label>
+        <textarea id="leadInNotes" data-save="leadInNotes" placeholder="Write or record your ideas here..."></textarea>
+      </div>
+      <button class="complete-button" data-complete="lead-in" type="button">Mark section complete</button>
+    </section>
+
+    <section class="lesson-section accent-section" id="watch" data-section="watch">
+      <div class="section-heading">
+        <p class="kicker">02 · Watch</p>
+        <h2>Watch the two videos and discuss the questions.</h2>
+      </div>
+      <div class="video-grid">
+        <figure><video controls playsinline preload="metadata" src="assets/video-1.mp4"></video><figcaption>Video 1</figcaption></figure>
+        <figure><video controls playsinline preload="metadata" src="assets/video-2.mp4"></video><figcaption>Video 2</figcaption></figure>
+      </div>
+      <div class="question-grid">
+        <label class="speech-card">Which video do you agree with more? Why?<textarea data-save="watch1"></textarea></label>
+        <label class="speech-card">What is the biggest difference between their attitudes towards autumn?<textarea data-save="watch2"></textarea></label>
+        <label class="speech-card">Do you think a dip in mood in autumn is more likely to be caused by the weather, your routine, or something else? Why?<textarea data-save="watch3"></textarea></label>
+      </div>
+      <button class="complete-button" data-complete="watch" type="button">Mark section complete</button>
+    </section>
+
+    <section class="lesson-section" id="reading" data-section="reading">
+      <div class="section-heading">
+        <p class="kicker">03 · Reading</p>
+        <h2>How the seasons change our sleep</h2>
+      </div>
+      <article class="reading-card">
+        <p><strong>The clocks are changing and the days are getting longer. Research suggests we might want to consider what this means for our bedtime.</strong></p>
+        <p>Many of us are familiar with the struggle to muster the energy to leave bed in the morning during the winter, choosing instead to <strong>hit the snooze button</strong>. And scientists say this isn't surprising.</p>
+        <p>New research suggests that humans may <em>need more sleep during the dark, cold winter months than they do during the summer</em>. This need seems to even occur in people living in cities, where artificial lights would be expected to interfere with the natural influence of daylight on our sleeping patterns.</p>
+        <p>Previous studies have found that exposure to artificial light before bedtime can <strong>suppress the secretion of melatonin</strong>, the hormone produced by the pineal gland that regulates our circadian clock, the natural sleep-wake cycle that repeats every 24 hours, and makes us feel sleepy.</p>
+        <p>But the German study, which used detailed sleep recordings of 188 patients who lived in urban settings and <strong>suffered from disturbed sleeping patterns</strong>, found that even when exposed primarily to artificial lights, the participants experienced seasonal variations in REM sleep, which is directly linked to our <strong>circadian rhythm</strong>. In fact, the participants slept an hour longer in December than in June.</p>
+        <p>But Kunz's team was surprised to find that there were also seasonal changes when it came to slow wave sleep (SWS), also known as deep sleep. The slow wave sleep of the study participants was 30 minutes shorter in September than in February.</p>
+        <p>It is also worth noting that the study was performed on patients <strong>suffering from sleep-disturbances such as insomnia</strong>, so it will need to be repeated in a healthy population to confirm these effects are seen more widely.</p>
+        <p>Exactly why our sleep changes with the seasons could be hidden in our evolutionary past, says Stanley. “We have evolved to dark-light cycles, so when we wake up on a winter's morning and it's dark, our brain is going ‘I can't do anything...there's no point <strong>leaping out of bed</strong>’.”</p>
+        <h3>How to improve your sleep</h3>
+        <p>“Get as much natural light as you can in the morning hours, so that your circadian system at least knows that the day has started,” says Kunz.</p>
+        <p>People can tolerate different levels of light at night, says Stanley, but recommends avoiding bright lights in the two hours before bedtime and phone screens right before going to sleep.</p>
+        <p>Most people maintain a similar sleep pattern throughout the year, says Kunz. They go to bed after watching TV at around 10.30–11pm and then wake around 7am to go to work. Children are particularly encouraged to <strong>stick to a consistent bed time</strong>, Kunz and his colleagues note in their study.</p>
+        <p>“When we know we need more sleep in the winter, it doesn't make sense to stick to the schedule that we create when we feel our best, during the summer,” says Kunz.</p>
+        <p>If nothing else, it could perhaps help you feel <strong>less sluggish</strong> when your alarm goes off on a cold winter morning.</p>
+      </article>
+      <button class="complete-button" data-complete="reading" type="button">Mark section complete</button>
+    </section>
+
+    <section class="lesson-section accent-section" id="vocabulary" data-section="vocabulary">
+      <div class="section-heading">
+        <p class="kicker">04 · Vocabulary</p>
+        <h2>Read the meanings below and find the words or phrases in the text that match them.</h2>
+      </div>
+      <div class="match-list" id="meaningExercise"></div>
+      <div class="action-row">
+        <button class="secondary-button" id="checkMeanings" type="button">Check answers</button>
+        <button class="text-button" id="resetMeanings" type="button">Try again</button>
+      </div>
+      <div class="feedback" id="meaningFeedback" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="lesson-section" id="practice" data-section="practice">
+      <div class="section-heading">
+        <p class="kicker">05 · Practice</p>
+        <h2>Complete each sentence with one of the phrases from the box.</h2>
+      </div>
+      <div class="word-bank" aria-label="Phrase box">
+        <span>hit the snooze button</span><span>experience a dip in mood</span><span>restore my sleep schedule</span><span>throw your sleep schedule off</span>
+      </div>
+      <div class="fill-list" id="fillExercise"></div>
+      <button class="secondary-button" id="checkFill" type="button">Check answers</button>
+      <div class="feedback" id="fillFeedback" role="status" aria-live="polite"></div>
+
+      <label class="prompt-card standalone-prompt">What’s one habit that can completely throw your sleep schedule off? How would you get your sleep schedule back on track?
+        <textarea data-save="practiceOpen"></textarea>
+      </label>
+
+      <div class="subheading">
+        <h3>Choose the phrase that best describes each situation. Then explain why.</h3>
+      </div>
+      <div class="choice-grid" id="choiceExercise"></div>
+      <button class="secondary-button" id="checkChoices" type="button">Check answers</button>
+      <div class="feedback" id="choiceFeedback" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="lesson-section accent-section" id="cases" data-section="cases">
+      <div class="section-heading">
+        <p class="kicker">06 · Speaking</p>
+        <h2>What’s Ruining Your Sleep?</h2>
+        <p>Read the situations and identify what is probably throwing the person’s sleep schedule off. Then suggest a solution.</p>
+      </div>
+      <div class="case-grid">
+        <article class="case-card">
+          <h3>Anna</h3>
+          <p>Anna goes to bed at 11 p.m. on weekdays. At weekends, she stays up until 2–3 a.m. and sleeps until noon. On Monday, she feels sluggish and hits the snooze button several times.</p>
+          <label>What is throwing Anna’s sleep schedule off?<textarea data-save="anna1"></textarea></label>
+          <label>What could she do to restore her sleep schedule?<textarea data-save="anna2"></textarea></label>
+          <label>Which changes would be realistic for her?<textarea data-save="anna3"></textarea></label>
+        </article>
+        <article class="case-card">
+          <h3>Emma</h3>
+          <p>Emma has noticed that every autumn she experiences a dip in mood. When the days get shorter, she spends much more time indoors and doesn’t feel like meeting friends after work. She also finds it harder to get out of bed.</p>
+          <label>What could be contributing to Emma’s dip in mood?<textarea data-save="emma1"></textarea></label>
+          <label>Which parts might be biological? Which could be related to her lifestyle?<textarea data-save="emma2"></textarea></label>
+          <label>What could she do to make the transition into autumn easier?<textarea data-save="emma3"></textarea></label>
+        </article>
+        <article class="case-card">
+          <h3>Mark</h3>
+          <p>Mark has started working from home. He gets up at 9:30, rarely goes outside before lunch and often works until 9 p.m. He says he feels drained during the day but becomes more energetic late at night.</p>
+          <label>What habits could be contributing to the problem?<textarea data-save="mark1"></textarea></label>
+          <label>What could he change during the day?<textarea data-save="mark2"></textarea></label>
+          <label>Would you recommend a strict bedtime? Why / why not?<textarea data-save="mark3"></textarea></label>
+        </article>
+      </div>
+      <aside class="vocab-sticky">
+        <h3>vocabulary</h3>
+        <ul><li>a dip in mood</li><li>disturbed sleeping patterns</li><li>restore your sleep schedule</li><li>throw your sleep schedule off</li><li>stick to a consistent bedtime</li><li>hit the snooze button</li><li>leap out of bed</li><li>feel / be sluggish</li><li>suffer from</li><li>circadian rhythm</li></ul>
+      </aside>
+      <div class="starter-strip">
+        <span>One thing that could be <strong>throwing their sleep schedule off</strong> is ...</span>
+        <span>This could be <strong>linked to</strong> ...</span>
+        <span>Another factor that could <strong>contribute to this</strong> is ...</span>
+        <span>I’d recommend ...ing because ...</span>
+      </div>
+      <button class="complete-button" data-complete="cases" type="button">Mark section complete</button>
+    </section>
+
+    <section class="lesson-section" id="review" data-section="review">
+      <div class="section-heading">
+        <p class="kicker">07 · Review</p>
+        <h2>Sleep Advice: Right or Wrong?</h2>
+        <p>Read each sentence. Is the target phrase used naturally? If not, correct it.</p>
+        <p class="example"><strong>Example:</strong> Staying up until 3 a.m. can really hit your sleep schedule off.<br>❌ Incorrect → <em>throw your sleep schedule off.</em></p>
+      </div>
+      <div class="review-list" id="reviewExercise"></div>
+      <button class="secondary-button" id="checkReview" type="button">Check answers</button>
+      <div class="feedback" id="reviewFeedback" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="finish-card" id="finish">
+      <p class="kicker">Lesson complete</p>
+      <h2>Good night, great English.</h2>
+      <p>Your answers are saved on this device, so you can close the page and continue later.</p>
+      <button class="text-button" id="resetAll" type="button">Reset all answers</button>
+    </section>
+  </main>
+
+  <div class="mobile-progress" aria-hidden="true"><span id="mobileProgressBar"></span></div>
+  <script src="app.js"></script>
+</body>
+</html>
